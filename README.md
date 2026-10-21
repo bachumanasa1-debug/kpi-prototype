@@ -1,2 +1,3 @@
 # kpi-prototype
-Practise
+Practise    Prototype dashboard built with Claude Code to track AI tool adoption.
+
