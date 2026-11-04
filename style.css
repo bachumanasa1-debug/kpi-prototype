@@ -1,0 +1,84 @@
+/* =====================================================================
+   style.css: THE "DECOR"
+   Controls how the page LOOKS: colours, fonts, spacing, card layout.
+   ===================================================================== */
+
+/* Colours stored once here, so changing a colour means editing one line */
+:root {
+  --page-bg: #f4f6f8;
+  --card-bg: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --up: #15803d;    /* green, for numbers going up */
+  --down: #b91c1c;  /* red, for numbers going down */
+}
+
+body {
+  margin: 0;
+  padding: 24px 16px;
+  background: var(--page-bg);
+  color: var(--text);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+header {
+  max-width: 1100px;
+  margin: 0 auto 24px;
+}
+
+h1 {
+  margin: 0 0 6px;
+  font-size: 1.6rem;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* The card area: a grid that fits as many cards per row as the screen allows.
+   On a wide screen that's 4 in a row; on a phone they stack. */
+.cards {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 18px 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid var(--accent);
+}
+
+.card h2 {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.value {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.extra {
+  margin: 4px 0 0;
+  color: var(--muted);
+}
+
+.definition {
+  margin: 12px 0 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* app.js adds one of these classes to the week-over-week card value */
+.up   { color: var(--up); }
+.down { color: var(--down); }

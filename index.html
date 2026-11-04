@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+  index.html: THE "ROOM LAYOUT"
+  This file only says WHAT is on the page and WHERE.
+  The look comes from style.css; the numbers are filled in by app.js.
+  To view it: double-click this file to open it in your browser.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Documentation Assistant – Adoption Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Page header -->
+  <header>
+    <h1>AI Documentation Assistant – Adoption Dashboard</h1>
+    <p class="subtitle">
+      Latest week: <span id="latest-week">–</span> ·
+      6 departments ·
+      <strong>Made-up data for practice only</strong>
+    </p>
+  </header>
+
+  <!-- The 4 KPI cards. Each value says "–" until app.js fills it in. -->
+  <main class="cards">
+
+    <section class="card">
+      <h2>Active users</h2>
+      <p class="value" id="kpi-active-users">–</p>
+      <p class="definition">Clinicians who used the tool in the latest week, all departments.</p>
+    </section>
+
+    <section class="card">
+      <h2>Minutes saved</h2>
+      <p class="value" id="kpi-minutes-saved">–</p>
+      <p class="extra" id="kpi-hours-saved"></p>
+      <p class="definition">Estimated documentation time saved in the latest week.</p>
+    </section>
+
+    <section class="card">
+      <h2>Adoption rate</h2>
+      <p class="value" id="kpi-adoption-rate">–</p>
+      <p class="definition">Active users ÷ eligible clinicians in the latest week.</p>
+    </section>
+
+    <section class="card">
+      <h2>Week-over-week change</h2>
+      <p class="value" id="kpi-wow-change">–</p>
+      <p class="definition">% change in active users vs the week before.</p>
+    </section>
+
+  </main>
+
+  <!-- Load the data first (the pantry), then the code that uses it (the chef). Order matters! -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
